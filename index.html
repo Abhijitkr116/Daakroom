@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daakroom | Redesigned</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+    <div class="cursor"></div>
+    <nav>
+        <div class="logo">
+            <img src="image/DaakRoomlogo.png" alt="">
+        </div>
+
+        <ul class="nav-links two-nav">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#Products">Products</a></li>
+        </ul>
+
+        <ul class="nav-links">
+            <li class="dropdown">
+                <button class="menu" onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+                    <svg width="40" height="40" viewBox="0 0 100 100">
+                      <path class="line line1" d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058" />
+                      <path class="line line2" d="M 20,50 H 80" />
+                      <path class="line line3" d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942" />
+                    </svg>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#products">Wishlist <i class="ri-arrow-right-line arrow"></i></a>
+                    <a href="#easy-daak">Easy Daak <i class="ri-arrow-right-line arrow"></i></a>
+                    <a href="#education">Education <i class="ri-arrow-right-line arrow"></i></a>
+                    <a href="#events">Events <i class="ri-arrow-right-line arrow"></i></a>
+                    <a href="#carnival">Letter Writing Carnival <i class="ri-arrow-right-line arrow"></i></a>
+                    <a href="#our-story">Our Story <i class="ri-arrow-right-line arrow"></i></a>
+                </div>
+                <li>
+            </li>
+        </ul>
+
+    </nav>
+    
+    <div class="heroSection">
+        <div class="daak"muted data-scroll data-scroll-speed="3">
+            <video muted loop autoplay src="https://videos.pexels.com/video-files/1191539/1191539-hd_1280_720_25fps.mp4"></video>
+            <!-- <img src="Images/postcard.png" alt=""> -->
+        </div>
+        <div class="contents-h" data-scroll data-scroll-speed="2">
+            <h2><span>D</span>iscover <span>T</span>he <span>A</span>rt <span>O</span>f <span class="writting">Handwritten</span> <span>L</span>etters</h2>
+        </div>
+        <div class="contents-p">
+            <p>At <span>Daakroom</span>, we believe in the timeless charm of handwritten communication. Our carefully curated letter writing kits and stationery collections are designed to help you reconnect with the joy of writing letters by hand. Experience the personal touch that digital communication often lacks.</p>
+        </div>
+        <div class="buttons">
+            <button>Shop now<i class="ri-arrow-right-line"></i></button>
+            <button>Subscribe <i class="ri-arrow-right-line"></i></button>
+        </div>
+    </div>
+
+    <div class="AboutDaakroom">
+        <div class="content">
+            <h2>What is <br><span><span class="daak">Daak</span>room?</span></h2>
+        </div>
+        <p><span>Daakroom</span> is a cultural enterprise dedicated to reviving the art of handwritten communication through creative events, partnerships, campaigns, products and workshops, with a mission to foster meaningful relationships and promote a digital detox culture. The name comes from the word <span>‘Daak’</span>, which means post in Hindi. <span>Daakroom</span> offers unique and engaging experiences that inspire people to embrace authentic connections through the power of the pen.</p>
+    </div>
+
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+</body>
+</html>
