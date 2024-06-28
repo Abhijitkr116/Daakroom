@@ -22,6 +22,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
+    overflow: hidden;
 }
 /* body::-webkit-scrollbar {
     display: none;
@@ -148,41 +149,6 @@ nav .dropdown-content a:hover .arrow{
     cursor: pointer;
     display: flex;
     padding: 0;
-}
-.line {
-    fill: none;
-    /* stroke: rgb(255, 255, 255); */
-    stroke: rgb(0, 0, 0);
-    stroke-width: 4; 
-    transition: stroke-dasharray 600ms cubic-bezier(0.4, 0, 0.2, 1),
-    stroke-dashoffset 600ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.line1 {
-    stroke-dasharray: 60 207;
-    stroke-width: 4;
-}
-.line2 {
-    stroke-dasharray: 60 60;
-    stroke-width: 4;
-}
-.line3 {
-    stroke-dasharray: 60 207;
-    stroke-width: 4;
-}
-.opened .line1 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 4;
-}
-.opened .line2 {
-    stroke-dasharray: 1 60;
-    stroke-dashoffset: -30;
-    stroke-width: 4;
-}
-.opened .line3 {
-    stroke-dasharray: 90 207;
-    stroke-dashoffset: -134;
-    stroke-width: 4;
 }
 
 
@@ -312,4 +278,66 @@ nav .dropdown-content a:hover .arrow{
 .AboutDaakroom p span{
     color: #CF6A25;
     font-weight: 900;
+}
+
+
+
+
+
+/* For mobile screens */
+@media only screen and (max-width: 576px) {
+
+/* Navbar */
+nav{
+    padding: 0 0.5rem;
+}
+nav .dropdown-content{
+    width: 70vw;
+    right: -70vw;
+    gap: 1rem;
+}
+nav .dropdown-content a{
+    font-size: 1.3rem;
+}
+nav .dropdown-content a .arrow{
+    font-size: 1.3rem;
+}
+nav .two-nav{
+    display: none;
+}
+.heroSection{
+    padding: 2rem 0.5rem 5rem 0.5rem;
+    background-color: red;
+}
+/* .heroSection .contents-h h2{
+    text-align: start;
+} */
+.heroSection .contents-h h2 .writting{
+    font-size: 10vw;
+    line-height: 3rem;
+}
+.heroSection .contents-p p{
+    width: 95%;
+    font-size: 1.1rem;
+    text-align: center;
+    line-height: 1.8rem;
+}
+
+.heroSection .buttons{
+    height: 5rem;
+    margin-top: 1rem;
+}
+.heroSection .buttons button{
+    border: none;
+    font-size: 1.1rem;
+    padding: 0.7rem 0.8rem 0.6rem 2rem;
+}
+
+
+.AboutDaakroom p{
+    padding: 1rem;
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    text-align: center;
+}
 }
