@@ -250,7 +250,7 @@ nav .dropdown-content a:hover .arrow{
 .AboutDaakroom{
     min-height: 100vh;
     width: 100%;
-    /* background-color: red; */
+    background-color: red;
     /* padding: 5rem; */
 }
 .AboutDaakroom .content{
@@ -306,12 +306,8 @@ nav .two-nav{
     display: none;
 }
 .heroSection{
-    padding: 2rem 0.5rem 5rem 0.5rem;
-    background-color: red;
+    padding: 1.5rem 0.5rem 5rem 0.5rem;
 }
-/* .heroSection .contents-h h2{
-    text-align: start;
-} */
 .heroSection .contents-h h2 .writting{
     font-size: 10vw;
     line-height: 3rem;
