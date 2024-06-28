@@ -51,6 +51,7 @@ nav{
     align-items: center;
     height: 100px;
     padding: 0 5rem;
+    position: relative;
 }
 nav .logo{
     height: 70px;
@@ -250,7 +251,8 @@ nav .dropdown-content a:hover .arrow{
 .AboutDaakroom{
     min-height: 100vh;
     width: 100%;
-    background-color: red;
+    display: flex;
+    flex-direction: column;
     /* padding: 5rem; */
 }
 .AboutDaakroom .content{
