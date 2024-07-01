@@ -86,7 +86,42 @@ navbar()
 
 function Daakcontent(){
     document.addEventListener("DOMContentLoaded", function () {
-        let previousBox = document.querySelector('.box-1'); // Set the initial box
+
+        if (window.matchMedia("(max-width: 576px)").matches){
+            let previousBox = document.querySelector('.box-1'); // Set the initial box
+
+        gsap.set(previousBox, { height: '50%' }); // Set initial active box to 50%
+        gsap.set(previousBox.querySelector('.image'), { opacity: 1 });
+        gsap.set(previousBox.querySelector('.content'), { opacity: 1, scale: 1 });
+        gsap.set(previousBox.querySelector('.content p'), { scale: 1 });
+        gsap.set(previousBox.querySelector('.content button'), { scale: 1 });
+        gsap.set(previousBox.querySelector('h2'), { opacity: 0, scale: 1 });
+
+        const boxes = document.querySelectorAll('.box');
+
+        boxes.forEach((box) => {
+            box.addEventListener('mouseenter', function () {
+                if (previousBox && previousBox !== box) {
+                    gsap.to(previousBox, { height: '15%', duration: 0.4, ease: "circ.in" }); // Reset the height of the previously active box
+                    gsap.to(previousBox.querySelector('.image'), { opacity: 0, duration: 0.4, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content'), { opacity: 0, scale: 0.9, duration: 0.4, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content p'), { scale: 0.7, duration: 0.5, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content button'), { scale: 0.95, duration: 0.7, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('h2'), { opacity: 1, scale: 1.05, duration: 0.4, ease: "circ.in" });
+                }
+                gsap.to(box, { height: '50%', duration: 0.4, ease: "circ.in" }); // Set the height of the hovered box to 50%
+                gsap.to(box.querySelector('.image'), { opacity: 1, duration: 0.4, ease: "circ.in" });
+                gsap.to(box.querySelector('.content'), { opacity: 1, scale: 1, duration: 0.4, ease: "circ.in" });
+                gsap.to(box.querySelector('.content p'), { scale: 1, duration: 0.5, ease: "circ.in" });
+                gsap.to(box.querySelector('.content button'), { scale: 1.05, duration: 0.7, ease: "circ.in" });
+                gsap.to(box.querySelector('h2'), { opacity: 0, scale: 0.95, duration: 0.4, ease: "circ.in" });
+
+                previousBox = box; // Update the previously active box
+            });
+        });
+        }
+        else{
+            let previousBox = document.querySelector('.box-1'); // Set the initial box
 
         gsap.set(previousBox, { width: '50%' }); // Set initial active box to 50%
         gsap.set(previousBox.querySelector('.image'), { opacity: 1 });
@@ -117,7 +152,9 @@ function Daakcontent(){
                 previousBox = box; // Update the previously active box
             });
         });
-    });
+    }
+});
+        
 }
 Daakcontent()
 

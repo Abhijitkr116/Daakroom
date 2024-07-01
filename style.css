@@ -22,11 +22,11 @@ body {
     padding: 0;
     box-sizing: border-box;
     position: relative;
-    /* overflow: hidden; */
+    overflow-x: hidden;
 }
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
     display: none;
-} */
+}
 
 .cursor{
     height: 30px;
@@ -457,5 +457,27 @@ nav .two-nav{
     font-size: 1.2rem;
     line-height: 2.2rem;
     text-align: center;
+}
+
+
+/* Daakroomcontent */
+.Daakcontent {
+    min-height: 70vh;
+    flex-direction: column;
+}
+.Daakcontent .box {
+    height: 15%;
+    width: 100%;
+}
+.Daakcontent .box h2 {
+    color: white;
+}
+.Daakcontent .box .image img {
+    filter: blur(3px);
+}
+
+.Daakcontent .box .content p {
+    font-size: 2rem;
+    width: 95%;
 }
 }
