@@ -63,13 +63,14 @@ var menu = document.querySelector(".dropdown .menu")
 var nav = gsap.timeline()
 nav.to(".dropdown-content",{
     right: 0,
-    duration: 0.6
+    duration: 0.5
 })
 nav.from(".dropdown-content a",{
     x: 150,
     duration: 0.7,
-    stagger: 0.28,
-    opacity: 0
+    stagger: 0.26,
+    opacity: 0,
+    color: "orange",
 })
 
 nav.pause()
@@ -82,6 +83,45 @@ hero.addEventListener("click",function(){
 })
 }
 navbar()
+
+function Daakcontent(){
+    document.addEventListener("DOMContentLoaded", function () {
+        let previousBox = document.querySelector('.box-1'); // Set the initial box
+
+        gsap.set(previousBox, { width: '50%' }); // Set initial active box to 50%
+        gsap.set(previousBox.querySelector('.image'), { opacity: 1 });
+        gsap.set(previousBox.querySelector('.content'), { opacity: 1, scale: 1 });
+        gsap.set(previousBox.querySelector('.content p'), { scale: 1 });
+        gsap.set(previousBox.querySelector('.content button'), { scale: 1 });
+        gsap.set(previousBox.querySelector('h2'), { opacity: 0, scale: 1 });
+
+        const boxes = document.querySelectorAll('.box');
+
+        boxes.forEach((box) => {
+            box.addEventListener('mouseenter', function () {
+                if (previousBox && previousBox !== box) {
+                    gsap.to(previousBox, { width: '15%', duration: 0.4, ease: "circ.in" }); // Reset the width of the previously active box
+                    gsap.to(previousBox.querySelector('.image'), { opacity: 0, duration: 0.4, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content'), { opacity: 0, scale: 0.95, duration: 0.4, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content p'), { scale: 0.7, duration: 0.5, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('.content button'), { scale: 0.95, duration: 0.7, ease: "circ.in" });
+                    gsap.to(previousBox.querySelector('h2'), { opacity: 1, scale: 1.05, duration: 0.4, ease: "circ.in" });
+                }
+                gsap.to(box, { width: '50%', duration: 0.4, ease: "circ.in" }); // Set the width of the hovered box to 50%
+                gsap.to(box.querySelector('.image'), { opacity: 1, duration: 0.4, ease: "circ.in" });
+                gsap.to(box.querySelector('.content'), { opacity: 1, scale: 1.05, duration: 0.4, ease: "circ.in" });
+                gsap.to(box.querySelector('.content p'), { scale: 1.05, duration: 0.5, ease: "circ.in" });
+                gsap.to(box.querySelector('.content button'), { scale: 1.05, duration: 0.7, ease: "circ.in" });
+                gsap.to(box.querySelector('h2'), { opacity: 0, scale: 0.95, duration: 0.4, ease: "circ.in" });
+
+                previousBox = box; // Update the previously active box
+            });
+        });
+    });
+}
+Daakcontent()
+
+
 
 var tl = gsap.timeline();
 
