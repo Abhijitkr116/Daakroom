@@ -42,8 +42,6 @@ body::-webkit-scrollbar {
     /* mix-blend-mode: difference; */
 }
 
-
-
 /* Navbar */
 nav{
     display: flex;
@@ -527,6 +525,89 @@ nav .dropdown-content a:hover .arrow{
     padding: 5rem 0;
 }
 
+
+footer{
+    min-height: 50vh;
+    width: 100%;
+    background-color: #F1ECE5;
+    position: relative;
+    padding: 0 3rem;
+}
+footer .b-h{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+    font-size: 4vw;
+    color: #1414145e;
+    z-index: 10;
+}
+footer .b-h .h1{
+    font-size: 3.5vw;
+}
+footer .b-h .h2{
+    color: #e87a30;
+}
+footer .b-h .h3{
+    font-size: 3.5vw;
+}
+footer .circle{
+    width: 800px;
+    height: 800px;
+    position: absolute;
+    background-color: #41414142;
+    left: 50%;
+    top: 30%;
+    border-radius: 50%;
+    transform: translate(-50%);
+    z-index: 8;
+    animation: floating 4s infinite ease-in-out;
+}
+
+
+footer .footer-in{
+    display: flex;
+}
+footer .Useful-links{
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    /* background-color: red; */
+    width: 50%;
+    padding: 2rem 0;
+}
+footer .Useful-links a{
+    text-decoration: none;
+    color: #000;
+}
+footer .social-links{
+    width: 50%;
+    display: flex;
+    gap: 1rem;
+    align-items: end;
+    flex-direction: column;
+    /* background-color: green; */
+    padding: 2rem 0;
+    
+}
+footer .social-links .social-icon{
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+footer .social-links .social-icon i{
+    font-size: 2.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+footer .social-links .social-icon i:hover{
+    color: #000000ad;
+}
+
+
 @media only screen and (max-width: 1200px) {
     /* Daakroomcontent */
     .Daakcontent {
@@ -557,6 +638,9 @@ nav .dropdown-content a:hover .arrow{
     }
     .swiper-slide img {
         height: 28%;
+    }
+    footer .b-h{
+        display: none;
     }
 }
 
@@ -670,4 +754,29 @@ nav .two-nav{
     padding: 2rem 0;
 }
 
+
+footer .footer-in{
+    flex-direction: column;
+}
+footer .footer-in {
+    display: flex;
+    justify-content: center;
+    align-items: center;    flex-direction: column;
+}
+footer .Useful-links{
+    width: 100%;
+}
+footer .social-links{
+    align-items: start;
+    width: 100%;
+}
+
+
+}
+
+
+@keyframes floating {
+    from { transform: translate(-50%,  0px); }
+    65%  { transform: translate(-50%, 10%); }
+    to   { transform: translate(-50%, 0px); }  
 }
