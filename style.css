@@ -408,7 +408,7 @@ nav .dropdown-content a:hover .arrow{
     text-align: center;
     font-size: 2.5rem;
     padding: 2rem 0 1rem 0;
-    border-bottom: 1px solid #000;
+    text-decoration: underline;
 }
 
 /* Swiper */
@@ -444,7 +444,7 @@ nav .dropdown-content a:hover .arrow{
 
 /* Our-Products */
 .Our-products{
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
     /* background-color: #8bd274; */
     padding: 3rem 0;
@@ -642,7 +642,9 @@ nav .two-nav{
 }
 
 
-
+.Our-products{
+    min-height: 80vh;
+}
 
 
 .Partners h2{
@@ -652,7 +654,7 @@ nav .two-nav{
     height: 200px;
 }
 .swiper-slide img {
-    height: 15%;
+    height: 17%;
 }
 
 .owl-carousel{
