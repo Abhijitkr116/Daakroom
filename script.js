@@ -9,7 +9,7 @@ const scroll = new LocomotiveScroll({
 
 
 function video(){
-    var main = document.querySelector("main");
+var main = document.querySelector("main");
 var cursor = document.querySelector(".cursor");
 var video1 = document.querySelector(".daak video");
 var value = "Pause";
@@ -87,7 +87,7 @@ navbar()
 function Daakcontent(){
     document.addEventListener("DOMContentLoaded", function () {
 
-        if (window.matchMedia("(max-width: 576px)").matches){
+        if (window.matchMedia("(max-width: 1200px)").matches){
             let previousBox = document.querySelector('.box-1'); // Set the initial box
 
         gsap.set(previousBox, { height: '50%' }); // Set initial active box to 50%
@@ -158,6 +158,43 @@ function Daakcontent(){
 }
 Daakcontent()
 
+function Partner(){
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 'auto',
+        spaceBetween: 0,
+        loop: true,
+        speed: 3000,  // Increase speed for a smooth transition
+        autoplay: {
+            delay: 0,  // Set delay to 0 to have a continuous transition
+            disableOnInteraction: false,
+            },
+        });
+}
+Partner()
+
+
+$('.owl-carousel').owlCarousel({
+    loop: true,
+    autoplay: true,
+    margin: 10,
+    nav: false,
+    responsive:{
+        0:{
+            items:1,
+            nav:false
+        },
+        1000:{
+            items:2,
+            nav:false,
+            loop:true
+        },
+        1300:{
+            items:3,
+            nav:false,
+            loop:true
+        }
+    }
+    })
 
 
 var tl = gsap.timeline();

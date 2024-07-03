@@ -27,98 +27,47 @@ body {
     overflow: hidden;
 }
 main {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
-.page1 {
-    height: 60%;
+.page1{
+    height: 100vh;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 2rem;
-}
-.box {
-    height: 100%;
-    width: 15%;
-    /* background-color: rgb(0, 0, 0); */
-    border-radius: 1rem;
-    transition: all 0.4s ease;
+    background-color: #111;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    overflow: hidden;
 }
-.box h2 {
-    color: white;
-    background-color: #000000;
-    height: 100%;
+.swiper-div{
+    height: 400px;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    opacity: 1;
-    transform: scale(1);
-    transition: transform 0.4s ease;
-    border-radius: 1rem;
-}
-.box .image{
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    position: absolute;
-}
-.box .image img {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    filter: blur(4px);
-}
-.box .content {
-    height: 100%;
-    width: 100%;
-    background: rgba(255, 255, 255, 0.201);
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding-top: 3rem;
-    opacity: 0;
-    z-index: 50;
-    transform: scale(0.95);
-    transition: transform 0.4s ease;
+    /* padding: 0 3rem; */
 }
 
-.box .content p {
-    font-size: 2.5rem;
-    color: #fff;
-    transition: transform 0.7s ease;
+
+/* Swiper */
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
     text-align: center;
-    width: 85%;
-}
-.box .content button {
-    border: none;
-    font-size: 1rem;
-    background-color: #000000;
-    color: white;
-    padding: 0.4rem 1rem 0.4rem 1.7rem;
-    border-radius: 2rem;
-    cursor: pointer;
-    margin-top: 1.5rem;
+    font-size: 18px;
+    background: #cfcfcf;
     display: flex;
+    justify-content: space-evenly;
     align-items: center;
-    transition: transform 0.7s ease;
+
 }
-.box .content button i {
-    opacity: 0;
-    transition: all 0.5s ease;
+
+.swiper-slide img {
+    display: block;
+    height: 30%;
+    object-fit: cover;
 }
-.box .content button:hover i {
-    margin-left: 1rem;
-    opacity: 1;
+
+.swiper {
+    margin-left: auto;
+    margin-right: auto;
 }
