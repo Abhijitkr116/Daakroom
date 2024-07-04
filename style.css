@@ -531,7 +531,8 @@ footer{
     width: 100%;
     background-color: #F1ECE5;
     position: relative;
-    padding: 0 3rem;
+    padding: 0 3rem 0 3rem;
+    overflow: hidden;
 }
 footer .b-h{
     display: flex;
